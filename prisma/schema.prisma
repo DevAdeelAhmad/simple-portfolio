@@ -7,3 +7,10 @@ datasource db {
   url = env("DATABASE_URL")
   relationMode = "prisma"
 }
+
+model GuestBook {
+  id String @id @default(uuid())
+  message String
+  username String
+  created_at DateTime @default(now())
+}
