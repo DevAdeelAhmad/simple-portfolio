@@ -3,6 +3,7 @@
 import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ThemeButton from "./ThemeButton";
 
 export default function Navbar() {
   let pathname = usePathname() || "/";
@@ -53,6 +54,7 @@ export default function Navbar() {
                     >
                       Projects
                     </Link>
+                    <ThemeButton/> 
                   </div>
                 </div>
                 <div className="-mr-2 flex items-center sm:hidden">
