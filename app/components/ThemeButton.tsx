@@ -10,7 +10,7 @@ export default function ThemeButton() {
         setMount(true);
     }, [])
 
-    if (!mount) {
+    if (!mount) { 
         return null;
     }
 
