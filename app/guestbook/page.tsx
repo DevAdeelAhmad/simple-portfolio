@@ -11,6 +11,8 @@ async function getEntries() {
     return data;
 }
 
+export const revalidate = 60;
+
 export default async function GuestBook() {
     const data = await getEntries();
     return (
@@ -23,11 +25,13 @@ export default async function GuestBook() {
             <div className="w-full">
                 <div className="max-w-[500px] mx-auto mt-8">
                     <Form />
-                    {data.map((entry) => (
-                        <div key={entry.id} className="w-full text-sm break-words">
-                            {entry.message}
-                        </div>
-                    ))}
+                    <div className="flex flex-col space-y-2">
+                        {data.map((entry) => (
+                            <div key={entry.id} className="w-full text-sm break-words">
+                                {entry.message}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

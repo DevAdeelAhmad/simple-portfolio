@@ -1,6 +1,7 @@
 //For posting the data from guestbook to server
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { prisma } from "./db";
 
 export async function postEntry(formdata: FormData) {
@@ -12,4 +13,6 @@ export async function postEntry(formdata: FormData) {
       username: "hello",
     },
   });
+
+  revalidatePath('/guestbook')
 }
