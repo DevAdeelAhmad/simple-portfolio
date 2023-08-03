@@ -14,7 +14,7 @@ export default function Home() {
           <Image alt='pic of Adeel Ahmad' src={pic} className='h-48 w-48 rounded-full object-cover object-top' />
           <h3 className='pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight'>Adeel Ahmad</h3>
           <p className='text-gray-500 dark:text-gray-300 text-center'>
-            Adeel Ahmad --> <span className='text-teal-500'>Full Stack Developer</span>
+            Adeel Ahmad -- <span className='text-teal-500'>Full Stack Developer</span>
           </p>
           <div className="flex space-x-5 pt-6">
             <a href="https://github.com/DevAdeelAhmad" target='_blank'>
